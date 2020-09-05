@@ -37,7 +37,7 @@
         <script src="https://kit.fontawesome.com/f352960784.js" crossorigin="anonymous"></script>
     </head>
     
-    <body class="text-white">
+    <body class="wlthFont text-white">
         <header>
             <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
                 <a class="navbar-brand" href="index.html"><h4><img src="assets/img/logo.png" width="30px" height="30px" /> <span>tWLTH</span></h4></a>
@@ -75,8 +75,11 @@
         <div class="jumbotron glassPanel" style="margin-top: 55px;">
             <div class="container">
                 <div class="row text-center">
-                    <div class="col text-center">
-                        <img src="assets/img/logo.png" width="140px" height="140px" class="rounded-circle" />
+                    <div class="col-md-4 text-center">
+                        <img src="assets/img/logo.png" width="50px" height="50px" class="rounded-circle" />
+                    </div>
+                    
+                    <div class="col-md-8 text-left">
                         <h1><span>tWLTH</span></h1>
                         <p class="text-white">The World Savings Vault on TRON</p>
                     </div>
@@ -93,11 +96,11 @@
                             <div class="container">
                                 <div class="row">
                                     <div class="col text-center">
-                                        <h5><span class="user-token-balance text-white">0.00000000</span> tWLTH</h5>
-                                        <p>
+                                        <h3><span class="user-token-balance text-white">0.00000000</span> tWLTH</h3>
+                                        <h5>
                                             <span class="badge badge-pill badge-danger"><span id="user-trx-balance">0.00000000</span> TRX</span>
                                              / <span class="badge badge-pill badge-light text-dark">$<span id="user-usd-balance" class="text-dark">0.00</span> USD</span>
-                                        </p>
+                                        </h5>
                                     </div>
                                 </div>
                             </div>
@@ -163,8 +166,8 @@
                             <div class="container">
                             <div class="row">
                                 <div class="col">
-                                    <small>Current tWLTH Price:</small>
-                                    <h1 class="text-white"><span class="text-white"><span id="rate-to-buy">0</span> TRX</span></h1>
+                                    <small>Current Price:</small>
+                                    <h1 class="text-success"><span class="text-success"><span id="rate-to-buy">0</span> TRX<small>/ tWLTH</small></span></h1>
                                 </div>
                             </div>
                             
@@ -172,20 +175,20 @@
                                     <!-- TRX Buy Input -->
                                     <div class="col text-left">
                                         <label>TRX to Spend:</label>
-                                        <input type="text" class="form-control buy-input" placeholder="TRX to spend" />
+                                        <input type="text" class="form-control roundedCorners buy-input" placeholder="TRX to spend" />
                                     </div>
                                 
                                     <!-- USD Display -->
                                     <div class="col text-left">
                                         <label>USD Value:</label>
-                                        <input type="text" class="form-control text-dark" placeholder="USD Value" id="usdBuyValue" readonly="" />
+                                        <input type="text" class="form-control roundedCorners text-dark" placeholder="USD Value" id="usdBuyValue" readonly="" />
                                     </div>
                                 </div>
                                 <br />
                             
                                 <div class="row">
                                     <div class="col text-center">
-                                        <input type="text" class="form-control text-dark token-input-buy" readonly="" value="0.00000000">
+                                        <input type="text" class="form-control roundedCorners text-dark token-input-buy" readonly="" value="0.00000000">
                                         <small>Every tWLTH purchase incurs a 10&#37; Dividend Fee.</small>
                                     </div>
                                 </div>
@@ -209,8 +212,8 @@
                             <div class="container">
                             <div class="row">
                                 <div class="col">
-                                    <small>Current tWLTH Value:</small>
-                                    <h1 class="text-danger"><span id="rate-to-sell">0</span> TRX</h1>
+                                    <small>Current Value:</small>
+                                    <h1 class="text-danger"><span class="text-danger"><span id="rate-to-sell">0</span> TRX<small>/ tWLTH</small></span></h1>
                                 </div>
                             </div>
                             
@@ -250,12 +253,50 @@
             
             <div class="row">
                 <div class="col-md-6">
-                    <a class="btn btn-block btn-lg btn-light whiteBorder rcAll"  href="#" data-toggle="modal" data-target="#rainmakerModal"><i class="fas fa-tint"></i> RainMaker (Price Floor)</a><br />
+                    <a class="btn btn-block btn-lg btn-light whiteBorder roundedCorners"  href="#" data-toggle="modal" data-target="#rainmakerModal"><i class="fas fa-tint"></i> RainMaker (Price Floor)</a><br />
                 </div>
                 
                 <div class="col-md-6">
-                    <a class="btn btn-block btn-lg btn-light whiteBorder rcAll" href="https://tronscan.org/#/contract/TYPZYSKHus3XS17iC6hw9c1aLPTEa6TQTw/code" target="_blank"><i class="fas fa-search-dollar"></i> View Contract</a><br />
+                    <a class="btn btn-block btn-lg btn-light whiteBorder roundedCorners" href="https://tronscan.org/#/contract/TYPZYSKHus3XS17iC6hw9c1aLPTEa6TQTw/code" target="_blank"><i class="fas fa-search-dollar"></i> View Contract</a><br />
                 </div>
+            </div>
+            
+            <hr />
+            <h3 class="text-center"><i>Diversify your Portfolio with Commonwealth.gg</i></h3>
+            <div class="row">
+                <div class="col-md-4 text-center">
+                    <div class="card bg-light rcAll">
+                        <div class="card-header">Ethereum Classic (WLTH)</div>
+                        <div class="card-body"></div>
+                        <div class="card-footer">
+                            <a class="btn btn-block btn-md btn-success rcAll" href="https://commonwealth.gg/use.html" target="_blank">Visit Now</a>
+                        </div>
+                    </div>
+                    <br />
+                </div>
+                
+                <div class="col-md-4 text-center">
+                    <div class="card bg-light rcAll">
+                        <div class="card-header">Ethereum (eWLTH)</div>
+                        <div class="card-body"></div>
+                        <div class="card-footer">
+                            <a class="btn btn-block btn-md btn-secondary rcAll" href="https://eth.commonwealth.gg/dashboard.html" target="_blank">Visit Now</a>
+                        </div>
+                    </div>
+                    <br />
+                </div>
+                
+                <div class="col-md-4 text-center">
+                    <div class="card bg-light rcAll">
+                        <div class="card-header">TRON (tWLTH)</div>
+                        <div class="card-body"></div>
+                        <div class="card-footer">
+                            <a class="btn btn-block btn-md btn-danger rcAll" href="https://trx.commonwealth.gg/dashboard.html" target="_blank">Visit Now</a>
+                        </div>
+                    </div>
+                    <br />
+                </div>
+            
             </div>
             
             <div class="row jumbotron glassPanel text-dark">
@@ -369,7 +410,7 @@
                         <div class="container">
                             <div class="row">
                                 <div class="col text-center">
-                                    <img id="qrImage" src="#" class="rcAll" alt="Your Crop Address as a QR Code"><br />
+                                    <img id="qrImage" src="#" class="roundedCorners" alt="Your Crop Address as a QR Code"><br />
                                     <br />
                                     <b>TRON Address: </b><br />
                                     <small id="myTronAddr"></small>
@@ -380,7 +421,7 @@
 
                     <!-- Modal footer -->
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-block -md btn-danger rcAll" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-block -md btn-danger roundedCorners" data-dismiss="modal">Close</button>
                     </div>
 
                 </div>
@@ -389,7 +430,7 @@
         
         <div class="modal" id="settingsModal">
             <div class="modal-dialog">
-                <div class="modal-content bg-light rcAll">
+                <div class="modal-content bg-light roundedCorners">
 
                     <!-- Modal Header -->
                     <div class="modal-header">
@@ -415,7 +456,7 @@
 
                     <!-- Modal footer -->
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-block -md btn-danger rcAll" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-block -md btn-danger roundedCorners" data-dismiss="modal">Close</button>
                     </div>
 
                 </div>
@@ -424,7 +465,7 @@
         
         <div class="modal" id="rainmakerModal">
             <div class="modal-dialog">
-                <div class="modal-content bg-light rcAll">
+                <div class="modal-content bg-light roundedCorners">
 
                     <!-- Modal Header -->
                     <div class="modal-header">
@@ -455,8 +496,8 @@
                                     </small>
                                     <br />
                                     <br />
-                                    <button id="makeItRainTx" class="btn btn-block btn-md btn-success rcAll" href="#">Raise Price Floor</button><br />
-                                    <a class="btn btn-block btn-md btn-light rcAll" href="#" target="_blank">View Pricefloor Contract</a>
+                                    <button id="makeItRainTx" class="btn btn-block btn-md btn-success roundedCorners" href="#">Raise Price Floor</button><br />
+                                    <a class="btn btn-block btn-md btn-light roundedCorners" href="#" target="_blank">View Pricefloor Contract</a>
                                 </div>
                             </div>
                         </div>
@@ -464,7 +505,7 @@
 
                     <!-- Modal footer -->
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-block -md btn-danger rcAll" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-block -md btn-danger roundedCorners" data-dismiss="modal">Close</button>
                     </div>
 
                 </div>

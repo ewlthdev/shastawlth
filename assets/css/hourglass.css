@@ -1,6 +1,6 @@
 body {
     background: rgb(86,180,211);
-    background: linear-gradient(-45deg, rgba(130,0,0,1) 0%, rgba(0,0,0,1) 100%);
+    background: linear-gradient(-45deg, rgba(178,34,34,1) 0%, rgba(223,75,75,1) 100%);
 	background-size: 400% 400%;
 	animation: gradient 15s ease infinite;
 }
@@ -33,7 +33,7 @@ body {
 .rcLeft         {border-radius: 5px  0px  0px 5px;}
 .rcRight        {border-radius:  0px 5px 5px  0px;}
 
-.rcAll          {border-radius: 5px 5px 5px 5px;}
+.roundedCorners {border-radius: 12px 12px 12px 12px;}
 .rcNone         {border-radius:  0px  0px  0px  0px;}
 
 .clearPanel {

@@ -201,7 +201,7 @@ function updateUserInformation(){
     }).catch((error)=>{console.log(error)});
     
     $("#ref-url").val("https://trx.commonwealth.gg/dashboard.html?masternode=" + tronWeb.defaultAddress.base58)
-    $("#qrImage").replaceWith('<img src="https://chart.googleapis.com/chart?chs=350x350&amp;cht=qr&amp;chl=' + tronWeb.defaultAddress.base58 + '&amp;choe=UTF-8" class="rcAll" />');
+    $("#qrImage").replaceWith('<img src="https://chart.googleapis.com/chart?chs=350x350&amp;cht=qr&amp;chl=' + tronWeb.defaultAddress.base58 + '&amp;choe=UTF-8" class="roundedCorners" />');
     $("#myTronAddr").replaceWith('<small>'+ tronWeb.defaultAddress.base58 +'</small>');
 }
 
