@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en" data-react-helmet="lang">
+    <head>
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:creator" content="@commonwealth_gg" />
+        <meta name="twitter:title" content="Commonwealth.gg tWLTH" />
+        <meta name="twitter:description" content="The World's Saving Fund on TRON" />
+        <meta name="twitter:image" content="https://commonwealth.gg/img/coin.png"/>
+        
+        <meta property="og:url" content="https://commonwealth.gg" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Commonwealth.gg tWLTH" />
+        <meta property="og:description" content="The World's Saving Fund on TRON" />
+        <meta property="og:image" content="https://commonwealth.gg/img/coin.png" />
+        
+        <title class="notranslate">Dashboard | tWLTH</title>
+        
+        <meta charset="utf8">
+        <meta name="description" content="The World's Saving Fund on TRON">
+        <meta name="keywords" content="Commonwealth, tron, TRON, savings, bank, dapp, decentralised, defi, finance, earn, dividends, fair, cryptocurrency, blockchain, investor, money, UBI, income, nomad, open">
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+        
+        <!-- Semantic Style - Replace with Bootstrap -->
+        <link rel="stylesheet" href="assets/css/semantic.min.css">
+        
+        <!-- Alertify CSS -->
+        <link rel="stylesheet" href="assets/css/alertify.min.css" />
+        <link rel="stylesheet" href="assets/css/themes/semantic.min.css" />
+        
+        <!-- Bootstrap theme -->
+        <link rel="stylesheet" href="assets/css/bootstrap-default.min.css" />
+        <link rel="stylesheet" href="assets/css/hourglass.css" />
+        <link rel="stylesheet" href="assets/css/dark-mode.css">
+        
+        <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic&subset=latin" rel="stylesheet">
+        
+        <link rel="icon" type="image/png" href="assets/img/wlth-gradient-coin.png">
+        
+        <!-- FontAwesome -->
+        <script src="https://kit.fontawesome.com/f352960784.js" crossorigin="anonymous"></script>
+    </head>
+    
+    <body class="text-white">
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+                <a class="navbar-brand" href="index.html"><h4><img src="assets/img/logo.png" width="30px" height="30px" /> <span>tWLTH</span></h4></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarColor02">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item"><a class="nav-link" href="dashboard.html"><i class="fas fa-coins"></i>  <span>Dashboard</span></a></li>
+                        <li class="nav-item"><a class="nav-link" href="exchange.html"><i class="fas fa-random"></i> <span>Exchange</span></a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html"><i class="fas fa-info-circle"></i> <span>About</span></a></li>
+                    </ul>
+                    
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span><i class="fas fa-share-square"></i> Social Media</span>
+                            </a>
+                            <div class="dropdown-menu bg-light" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="https://twitter.com/tWLTH_gg" target="_blank"><i class="fab fa-twitter text-info"></i>  Twitter</a>
+                                <a class="dropdown-item" href="https://discord.gg/RmakwYz" target="_blank"><i class="fab fa-discord text-primary"></i> <span>Discord</span></a>
+                                <a class="dropdown-item" href="https://t.me/tWLTH" target="_blank"><i class="fab fa-telegram text-info"></i> <span>Telegram</span></a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="media.html"><i class="fab fa-youtube text-danger"></i> <span>YouTube</span></a>
+                            </div>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="https://github.com/p3c-bot" target="_blank"><i class="fab fa-github"></i> <span>GitHub</span></a></li>
+                        <li class="nav-item"><a class="nav-link" data-target="#settingsModal" data-toggle="modal"><i class="fas fa-cog"></i> <span>Settings</span></a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        
+        <div class="jumbotron glassPanel" style="margin-top: 55px;">
+            <div class="container">
+                <div class="row text-center">
+                    <div class="col text-center">
+                        <img src="assets/img/logo.png" width="140px" height="140px" class="rounded-circle" />
+                        <h1><span>tWLTH</span></h1>
+                        <p class="text-white">The World Savings Vault on TRON</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="container" id="root">            
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card glassPanel">
+                        <div class="card-header">My Wallet</div>
+                        <div class="card-body">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col text-center">
+                                        <h5><span class="user-token-balance text-white">0.00000000</span> tWLTH</h5>
+                                        <p>
+                                            <span class="badge badge-pill badge-danger"><span id="user-trx-balance">0.00000000</span> TRX</span>
+                                             / <span class="badge badge-pill badge-light text-dark">$<span id="user-usd-balance" class="text-dark">0.00</span> USD</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col text-center">
+                                        <a class="btn btn-block btn-md btn-dark redBorder text-light roundedCorners" href="#" data-toggle="modal" data-target="#sendDivsModal"><i class="fas fa-arrow-up"></i> Send</a>
+                                    </div>
+                                    
+                                    <div class="col text-center">
+                                        <a class="btn btn-block btn-md btn-dark greenBorder text-light roundedCorners" href="#" data-toggle="modal" data-target="#receiveDivsModal"><i class="fas fa-arrow-down"></i> Receive</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br />
+                </div>
+                
+                <div class="col-md-6">
+                    <div class="card glassPanel">
+                        <div class="card-header">My tWLTH</div>
+                        <div class="card-body">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col text-center">
+                                        <h5 class="text-white"><span class="user-dividends">0.00000000</span> TRX</h5>
+                                        <p>My Dividends</p>
+                                    </div>
+                                    
+                                    <div class="col text-center">
+                                        <h5 class="text-white">+ &#36;<span id="user-dividends-usd" class="text-white">0.00</span> USD</h5>
+                                        <p>Growth on Reinvest</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col text-center">
+                                        <button class="btn btn-block btn-primary btn-reinvest roundedCorners"><b><i class="fas fa-recycle"></i> +<span id="user-reinvest">0.00</span> tWLTH</b></button>
+                                    </div>
+                                    
+                                    <div class="col text-center">
+                                        <button class="btn btn-block btn-dark btn-withdraw roundedCorners"><i class="fas fa-hand-holding-usd"></i> Withdraw</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br />
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card glassPanel text-left">
+                        <div class="card-header">Buy tWLTH</div>
+                        <div class="card-body">
+                            <div class="container">
+                            <div class="row">
+                                <div class="col">
+                                    <small>Current tWLTH Price:</small>
+                                    <h1 class="text-white"><span class="text-white"><span id="rate-to-buy">0</span> TRX</span></h1>
+                                </div>
+                            </div>
+                            
+                                <div class="row">
+                                    <!-- TRX Buy Input -->
+                                    <div class="col text-left">
+                                        <label>TRX to Spend:</label>
+                                        <input type="text" class="form-control buy-input" placeholder="TRX to spend" />
+                                    </div>
+                                
+                                    <!-- USD Display -->
+                                    <div class="col text-left">
+                                        <label>USD Value:</label>
+                                        <input type="text" class="form-control text-dark" placeholder="USD Value" id="usdBuyValue" readonly="" />
+                                    </div>
+                                </div>
+                                <br />
+                            
+                                <div class="row">
+                                    <div class="col text-center">
+                                        <input type="text" class="form-control text-dark token-input-buy" readonly="" value="0.00000000">
+                                        <small>Every tWLTH purchase incurs a 10&#37; Dividend Fee.</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <div class="container">
+                                <div class="row">
+                                    <button class="btn btn-block btn-lg btn-success btn-buy buy-token-button roundedCorners">Buy tWLTH</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br />
+                </div>
+                
+                <div class="col-md-6">
+                    <div class="card glassPanel text-left">
+                        <div class="card-header">Sell tWLTH</div>
+                        <div class="card-body">
+                            <div class="container">
+                            <div class="row">
+                                <div class="col">
+                                    <small>Current tWLTH Value:</small>
+                                    <h1 class="text-danger"><span id="rate-to-sell">0</span> TRX</h1>
+                                </div>
+                            </div>
+                            
+                                <div class="row">
+                                    <div class="col text-left">
+                                        <label>tWLTH to Sell:</label>
+                                        <input type="number" class="form-control sell-input" placeholder="Amount of tWLTH">
+                                    </div>
+                                    
+                                    <!-- USD Display -->
+                                    <div class="col text-left">
+                                        <label>USD Value:</label>
+                                        <input type="text" class="form-control" placeholder="USD Value" id="usdSellValue" readonly="" />
+                                    </div>
+                                </div>
+                                <br />
+                            
+                                <div class="row">
+                                    <div class="col text-center">
+                                        <input type="text" class="form-control trx-input-sell" readonly="" value="0.00000000">
+                                        <small>Every tWLTH sale incurs a 10&#37; Dividend Fee.</small>
+                                    </div>
+                                </div>
+                        </div>
+                        </div>
+                        <div class="card-footer">
+                            <div class="container">
+                                <div class="row">
+                                    <button class="btn btn-block btn-lg btn-danger btn-buy sell-token-button roundedCorners">Sell tWLTH</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br />
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-md-6">
+                    <a class="btn btn-block btn-lg btn-light whiteBorder rcAll"  href="#" data-toggle="modal" data-target="#rainmakerModal"><i class="fas fa-tint"></i> RainMaker (Price Floor)</a><br />
+                </div>
+                
+                <div class="col-md-6">
+                    <a class="btn btn-block btn-lg btn-light whiteBorder rcAll" href="#"><i class="fas fa-search-dollar"></i> View Contract</a><br />
+                </div>
+            </div>
+            
+            <div class="row jumbotron glassPanel text-dark">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6 text-left">
+                            <h3 class="text-white">Here&apos;s your Link...</h3>
+                            <input id="ref-url" class="form-control text-secondary" value="" readonly="" />
+                            <small class="text-white">When others use your link, you get a 3&#37; commission!</small>
+                            <br />
+                            <br />
+                        </div>
+                        <br />
+                        
+                        <div class="col-md-6 text-center">
+                            <div class="row">
+                                <div class="col text-center">
+                                    <br />
+                                    <h3 class="text-danger">
+                                        <span class="badge badge-pill badge-danger">
+                                            <span id="contract-trx-balance">0</span> TRX
+                                        </span>
+                                    </h3>
+                                    <p class="text-white">Contract Holdings</p>
+                                </div>
+                                
+                                <div class="col text-center">
+                                    <br />
+                                    <h3 class="text-white">
+                                        <span class="badge badge-pill badge-light text-dark">
+                                            <span id="contract-token-balance" class="text-dark">0</span> DIVS
+                                        </span>
+                                    </h3>
+                                    <p class="text-white">Total Supply</p>
+                                </div>
+                            </div>
+                        </div>
+                        <br />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br />
+        
+        <footer class="footer glassPanel">
+            <div class="container">
+                <div class="row">
+                    <div class="col text-center">
+                        <br />
+                        <small>
+                            This project is experimental. Do not send any TRX you cannot afford to lose. There is zero guarantee that you will make TRX. This is very new technology and we kindly ask anyone who doesn't grasp the risks inherent to Blockchain technology to not participate in Commonwealth. The contract is running <a href="https://etherscan.io/address/0x5833C959C3532dD5B3B6855D590D70b01D2d9fA6" target="_blank">here</a> and cannot be changed. Don't trust, verify. 
+                        </small><br />
+                        <div id="google_translate_element"></div>
+                        <br />
+                    </div>
+                </div>
+            </div>
+        </footer>
+        
+        <!-- MODALS -->
+        <div class="modal" id="sendDivsModal">
+            <div class="modal-dialog">
+                <div class="modal-content bg-dark roundedCorners">
+
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4 class="modal-title text-white">Send tWLTH</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col">
+                                    <input type="text" class="form-control roundedCorners transfer-input" placeholder="tWLTH to Send..." /><br />
+                                    <input type="text" class="form-control roundedCorners recipient-input" placeholder="Address to send tWLTH to..." />
+                                </div>
+                            </div>
+                            <br />
+                                
+                            <div class="row">
+                                <div class="col text-center">
+                                    <button class="btn btn-info btn-block roundedCorners btn-sell transfer-token-button"><i class="fas fa-arrow-up"></i> Send tWLTH <i class="fas fa-arrow-up"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        
+        <div class="modal" id="receiveDivsModal">
+            <div class="modal-dialog">
+                <div class="modal-content bg-dark roundedCorners">
+
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4 class="modal-title">Receive tWLTH</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col text-center">
+                                    <img id="qrImage" src="#" class="rcAll" alt="Your Crop Address as a QR Code"><br />
+                                    <br />
+                                    <b>TRON Address: </b><br />
+                                    <small id="myTronAddr"></small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-block -md btn-danger rcAll" data-dismiss="modal">Close</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        
+        <div class="modal" id="settingsModal">
+            <div class="modal-dialog">
+                <div class="modal-content bg-light rcAll">
+
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4 class="modal-title">tWLTH Settings</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col text-left">
+                                    <h3>Set Referrer</h3>
+                                    <label>Enter your referrer&apos;s TRX Address: </label><br />
+                                    <input id="referralAddress" type="text" class="form-control-sm btn-block rcAll" placeholder="0x..." /><br />
+                                    <button id="setReferral" class="btn btn-block btn-md btn-success rcAll" href="#">Set Referrer</button>
+                                </div>
+                            </div>
+                            
+                            <hr />
+                            
+                            <div class="row">
+                                <div class="col text-left">
+                                    <h3>Theme Settings</h3>
+                                    <p>Toggle the switch below to enable or disable Dark Mode!</p>
+                                    <div class="custom-control custom-switch">
+                                        <input type="checkbox" class="custom-control-input" id="darkSwitch">
+                                        <label class="custom-control-label" for="darkSwitch">Use Dark Mode</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-block -md btn-danger rcAll" data-dismiss="modal">Close</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        
+        <div class="modal" id="rainmakerModal">
+            <div class="modal-dialog">
+                <div class="modal-content bg-light rcAll">
+
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4 class="modal-title">Price Floor</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col text-center">
+                                    <h3><span id="rainmakerDividends">0</span> TRX</h3>
+                                    <small>Pricefloor Earnings</small>
+                                </div>
+                                
+                                <div class="col text-center">
+                                    <h3><span id="rainmakerTokens">0</span> tWLTH</h3>
+                                    <small>Providing Permanent Value</small>
+                                </div>
+                            </div>
+                            
+                            <div class="row">
+                                <div class="col text-center">
+                                    <br />
+                                    <small>
+                                        Raising the Price Floor tells the Rainmaker contract to buy as much tWLTH as it can with the Dividends it has earned. This has the effect of raising the minimum price which tWLTH will ever be sold at - and since the Rainmaker contract can never sell, transfer or destroy its tWLTH, this minimum value will only grow larger over time as the tWLTH platform is used.
+                                    </small>
+                                    <br />
+                                    <br />
+                                    <button id="raiseFloor" class="btn btn-block btn-md btn-success rcAll" href="#">Raise Price Floor</button><br />
+                                    <a class="btn btn-block btn-md btn-light rcAll" href="#" target="_blank">View Pricefloor Contract</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-block -md btn-danger rcAll" data-dismiss="modal">Close</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        
+        <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script> 
+    
+        <!-- Bootstrap core JavaScript -->
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/popper.min.js"></script>
+        <script src="assets/js/bootstrap.min.js"></script>
+        <script src="assets/js/bootstrap.dataTables.min.js"></script>
+        
+        <script src="assets/js/jquery.lazyload.min.js"></script>
+        <script src="assets/js/jquery.validation.min.js"></script>
+        <script src="assets/js/jquery.dataTables.min.js"></script>
+        <script src="assets/js/tether.min.js"></script>
+        <script src="assets/js/common.min.js"></script>
+        <script src="assets/js/d3.v5.min.js"></script>
+        <script src="assets/js/alertify.min.js"></script>
+        <script src="assets/js/semantic.min.js"></script>
+        <script src="assets/js/moment.min.js"></script>
+        <script src="assets/js/clipboard.min.js"></script>
+        <script src="assets/js/lodash.min.js"></script>
+        <script src="assets/js/dark-mode-switch.min.js"></script>
+    
+        <script src="assets/dapps/hourglass.js"></script>
+		<script src="assets/lib/trx-usd-price.js"></script>
+        
+        <script type="text/javascript">
+            function googleTranslateElementInit() {
+                new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+            }
+        </script>
+        
+		
+        
+        <script type="text/javascript">
+			function getCookie(name) {
+				var dc = document.cookie;
+				var prefix = name + "=";
+				var begin = dc.indexOf("; " + prefix);
+
+				if (begin == -1) {
+				  begin = dc.indexOf(prefix);
+				  if (begin != 0) return null;
+				}
+				else
+				{
+					begin += 2;
+					var end = document.cookie.indexOf(";", begin);
+					if (end == -1) {
+					end = dc.length;
+				  }
+				}
+
+				return decodeURI(dc.substring(begin + prefix.length, end));
+			}
+
+			var url_string = window.location.href;
+			var url = new URL(url_string);
+			var theCookie = "masternode=" + url.searchParams.get("masternode");
+
+			if (url.searchParams.get("masternode") !== null) {
+			  var toSet = "masternode=" + url.searchParams.get("masternode");
+			  document.cookie=theCookie;
+			} else {
+
+			  var refCookie = getCookie("masternode");
+
+			  if (refCookie === null) {
+				console.log("Ref cookie was null. Setting to default.");
+				document.cookie = "masternode=TRC1hwc1JaBL9kGp6wFYYCXUF4FVinpqbV";
+			  } else {
+				// do nothing if the cookie is already set and there is no new mnode link
+			  }
+			}
+        </script>
+    </body>
+</html>
