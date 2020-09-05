@@ -8,9 +8,11 @@ var prev_account;
 async function loadTronWeb(){
     if( typeof (window.tronWeb)=== 'undefined'){
         setTimeout(loadTronWeb,1000)
+        alertify.error('Could not connect...');
     } else {
         hourglassContract = await tronWeb.contract().at(hourglassAddress);
         rainmakerContract = await tronWeb.contract().at(rainmakerAddress);
+        alertify.success('Connected to tWLTH (TRON)');
         setTimeout(function(){startLoop()},1000);
     }
 }
@@ -53,12 +55,14 @@ window.addEventListener("load",function() {
     // buy token button
     $(".buy-token-button").click(function(){
         var buyTotal=tronWeb.toSun($(".buy-input").val());
-        hourglassContract.buy(getCookie("masternode").split(";")[0]).send({
-            callValue:buyTotal
-        }).then((result)=>{
+        hourglassContract.buy(getCookie("masternode").split(";")[0]).send({callValue:buyTotal}).then((result)=>{
+            alertify.success('Depositing TRX, Please Wait...')
             $(".buy-input").val(0);
             $(".buy-input").trigger("change")
-        }).catch((error)=>{console.log(error)})
+        }).catch((error)=>{
+            alertify.error('Failed to Deposit TRX');
+            console.log(error);
+        })
     });
     
     // sell-token-btn.click
@@ -66,9 +70,13 @@ window.addEventListener("load",function() {
         var sellTotal=$(".sell-input").val();
         sellTotal= tronWeb.toHex((sellTotal * (Math.pow(10,18))));
         hourglassContract.sell(sellTotal).send().then((result)=>{
+            alertify.success('Selling tWLTH, Please Wait...')
             $(".sell-input").val(0);
             $(".token-input-sell").val("0.00000000")
-        }).catch((error)=>{console.log(error)})
+        }).catch((error)=>{
+            alertify.error('Failed to sell tWLTH');
+            console.log(error)
+        })
     });
     
     // sell-token-btn.click
@@ -77,13 +85,40 @@ window.addEventListener("load",function() {
         var recipientAddr=$(".recipient-input").val();
         transferTotal= tronWeb.toHex((transferTotal * (Math.pow(10,18))));
         hourglassContract.transfer(recipientAddr, transferTotal).send().then((result)=>{
+            alertify.success('Sending tWLTH, Please Wait...')
             $(".transfer-input").val(0);
             $(".recipient-input").val("Recipient Address...")
-        }).catch((error)=>{console.log(error)})
+        }).catch((error)=>{
+            alertify.error('Failed to Send tWLTH');
+            console.log(error)
+        })
     });
 
-    $(".btn-reinvest").click(function(){hourglassContract.reinvest().send().then((result)=>{}).catch((error)=>{console.log(error)})});
-    $(".btn-withdraw").click(function(){hourglassContract.withdraw().send().then((result)=>{}).catch((error)=>{console.log(error)})});
+    $(".btn-reinvest").click(function(){
+        hourglassContract.reinvest().send().then((result)=>{
+            alertify.success('Reinvesting, Please Wait...')
+        }).catch((error)=>{
+            alertify.error('Failed to Reinvest.');
+            console.log(error)
+        })
+    });
+    
+    $(".btn-withdraw").click(function(){
+        hourglassContract.withdraw().send().then((result)=>{
+            alertify.success('Withdrawing TRX, Please Wait...')
+        }).catch((error)=>{
+            alertify.error('Failed to Withdraw TRX');
+            console.log(error)
+        })
+    });
+    $("#makeItRainTx").click(function(){
+        rainmakerContract.makeItRain().send().then((result)=>{
+            alertify.success('Activing Rainmaker, Please Wait...')
+    }).catch((error)=>{
+            alertify.error('Activacting Rainmaker Failed');
+            console.log(error)
+        })
+    });
 });
 
 function startLoop(){
