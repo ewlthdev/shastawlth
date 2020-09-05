@@ -10,8 +10,8 @@ contract Hourglass {
     event onWithdraw(address indexed customerAddress, uint256 tronWithdrawn);
     event Transfer(address indexed from, address indexed to, uint256 tokens);
 
-    string public name = "Function Island Hourglass Game";
-    string public symbol = "DIVS";
+    string public name = "Commonwealth.gg tWLTH";
+    string public symbol = "tWLTH";
     uint8 constant public decimals = 18;
     uint8 constant internal referralFee_ = 3;
     uint8 constant internal dividendFee_ = 10;
