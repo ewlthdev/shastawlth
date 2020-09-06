@@ -1,3 +1,6 @@
+var ETC_API_URL = "https://api.commonwealth.gg/chart/info";
+var ETH_API_URL = "https://api.commonwealth.gg/eth/chart/info";
+
 var hourglassAddress="TMP9psPSSt394SCtsLUQYZs6Lx8P5ZC6LK";  // tWLTH Contract
 var rainmakerAddress="TD28FH2HHBZwhXqnxmXLHh14nSW5SYvdQs"; // RainMaker Contract
 var hourglassContract;
@@ -134,7 +137,14 @@ function refreshData(){
 function updateNetworkInformation(){
     hourglassContract.totalTronBalance().call().then((result)=>{
         var TRXBalance=sunToDisplay(parseInt(result));
-        $("#contract-trx-balance").html(TRXBalance)
+        $("#contract-trx-balance").html(TRXBalance);
+        $("#TWLTHSupply").html(TRXBalance);
+        
+        $.ajax({
+            url: "https://min-api.cryptocompare.com/data/price?fsym=TRX&tsyms=USD", success: function(trxRate){
+                $("#TWLTHsizeUSD").html(formatTrxValue(TRXBalance * trxRate.USD.toFixed(4)))
+            }
+        })
     }).catch((error)=>{console.log(error)});
     
     hourglassContract.totalSupply().call().then((result)=>{
@@ -214,6 +224,29 @@ function checkwallet(){
     } else {account= 0}
 }
 
+function getCommonwealthEVMData() {
+    // eWLTH (ETH) API Call
+    $.getJSON(ETH_API_URL, function (eth) {
+		if (eth !== null) {
+			ETHSizeUSD = "$" + numberWithCommas(eth.SizeUSD.toFixed(0));
+			ETHSupply = numberWithCommas(Number(eth.P3CSupply).toFixed(0));
+			$("#EWLTHSupply").replaceWith(ETHSupply);
+            $("#EWLTHsizeUSD").replaceWith(ETHSizeUSD);
+		}
+	});
+    
+    // WLTH (ETC) API Call
+    $.getJSON(ETC_API_URL, function (etc) {
+		if (etc !== null) {
+			ETCSizeUSD = "$" + numberWithCommas(etc.SizeUSD.toFixed(0));
+			ETCSupply = numberWithCommas(Number(etc.P3CSupply).toFixed(0));
+			$("#WLTHSupply").replaceWith(ETCSupply);
+            $("#WLTHsizeUSD").replaceWith(ETCSizeUSD);
+		}
+	});
+}
+
+const numberWithCommas = (x) => {return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");}
 function sunToDisplay(_0xbc13x20){return formatTrxValue(tronWeb.fromSun(_0xbc13x20))}
 function formatTrxValue(_0xbc13x22){return parseFloat(parseFloat(_0xbc13x22).toFixed(2))}
 

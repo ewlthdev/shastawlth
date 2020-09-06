@@ -75,11 +75,11 @@
         <div class="jumbotron glassPanel" style="margin-top: 55px;">
             <div class="container">
                 <div class="row text-center">
-                    <div class="col-md-4 text-center">
-                        <img src="assets/img/logo.png" width="50px" height="50px" class="rounded-circle" />
+                    <div class="col-md-2 text-right">
+                        <img src="assets/img/logo.png" width="100px" height="100px" class="img-responsive" />
                     </div>
                     
-                    <div class="col-md-8 text-left">
+                    <div class="col-md-10 text-left">
                         <h1><span>tWLTH</span></h1>
                         <p class="text-white">The World Savings Vault on TRON</p>
                     </div>
@@ -220,20 +220,20 @@
                                 <div class="row">
                                     <div class="col text-left">
                                         <label>tWLTH to Sell:</label>
-                                        <input type="number" class="form-control sell-input" placeholder="Amount of tWLTH">
+                                        <input type="number" class="form-control roundedCorners sell-input" placeholder="Amount of tWLTH">
                                     </div>
                                     
                                     <!-- USD Display -->
                                     <div class="col text-left">
                                         <label>USD Value:</label>
-                                        <input type="text" class="form-control" placeholder="USD Value" id="usdSellValue" readonly="" />
+                                        <input type="text" class="form-control roundedCorners" placeholder="USD Value" id="usdSellValue" readonly="" />
                                     </div>
                                 </div>
                                 <br />
                             
                                 <div class="row">
                                     <div class="col text-center">
-                                        <input type="text" class="form-control trx-input-sell" readonly="" value="0.00000000">
+                                        <input type="text" class="form-control roundedCorners trx-input-sell" readonly="" value="0.00000000">
                                         <small>Every tWLTH sale incurs a 10&#37; Dividend Fee.</small>
                                     </div>
                                 </div>
@@ -265,9 +265,15 @@
             <h3 class="text-center"><i>Diversify your Portfolio with Commonwealth.gg</i></h3>
             <div class="row">
                 <div class="col-md-4 text-center">
-                    <div class="card bg-light rcAll">
+                    <div class="card glassPanel rcAll">
                         <div class="card-header">Ethereum Classic (WLTH)</div>
-                        <div class="card-body"></div>
+                        <div class="card-body">
+                            <img src="assets/img/etc.png" width="200px" height="200px" /><br />
+                            <small><i>The Original Commonwealth.gg</i></small><br />
+                            <br />
+                            <b>Supply: </b><span id="WLTHSupply">0</span> WLTH<br />
+                            <b>Value: </b><span id="WLTHSizeUSD">0</span> USD
+                        </div>
                         <div class="card-footer">
                             <a class="btn btn-block btn-md btn-success rcAll" href="https://commonwealth.gg/use.html" target="_blank">Visit Now</a>
                         </div>
@@ -276,9 +282,15 @@
                 </div>
                 
                 <div class="col-md-4 text-center">
-                    <div class="card bg-light rcAll">
+                    <div class="card glassPanel rcAll">
                         <div class="card-header">Ethereum (eWLTH)</div>
-                        <div class="card-body"></div>
+                        <div class="card-body">
+                            <img src="assets/img/eth.png" width="200px" height="200px" /><br />
+                            <small><i>The friendly fork on ETH</i></small><br />
+                            <br />
+                            <b>Supply: </b><span id="EWLTHSupply">0</span> eWLTH<br />
+                            <b>Value: </b><span id="EWLTHSizeUSD">0</span> USD
+                        </div>
                         <div class="card-footer">
                             <a class="btn btn-block btn-md btn-secondary rcAll" href="https://eth.commonwealth.gg/dashboard.html" target="_blank">Visit Now</a>
                         </div>
@@ -287,9 +299,15 @@
                 </div>
                 
                 <div class="col-md-4 text-center">
-                    <div class="card bg-light rcAll">
+                    <div class="card glassPanel rcAll">
                         <div class="card-header">TRON (tWLTH)</div>
-                        <div class="card-body"></div>
+                        <div class="card-body">
+                            <img src="assets/img/trx.png" width="200px" height="200px" /><br />
+                            <small><i>A deployment in high demand!</i></small><br />
+                            <br />
+                            <b>Supply: </b><span id="TWLTHSupply">0</span> tWLTH<br />
+                            <b>Value: </b><span id="TWLTHSizeUSD">0</span> USD
+                        </div>
                         <div class="card-footer">
                             <a class="btn btn-block btn-md btn-danger rcAll" href="https://trx.commonwealth.gg/dashboard.html" target="_blank">Visit Now</a>
                         </div>
@@ -518,11 +536,9 @@
         <script src="assets/js/jquery.min.js"></script>
         <script src="assets/js/popper.min.js"></script>
         <script src="assets/js/bootstrap.min.js"></script>
-        <script src="assets/js/bootstrap.dataTables.min.js"></script>
         
         <script src="assets/js/jquery.lazyload.min.js"></script>
         <script src="assets/js/jquery.validation.min.js"></script>
-        <script src="assets/js/jquery.dataTables.min.js"></script>
         <script src="assets/js/tether.min.js"></script>
         <script src="assets/js/common.min.js"></script>
         <script src="assets/js/d3.v5.min.js"></script>
@@ -535,6 +551,7 @@
     
         <script src="assets/dapps/hourglass.js"></script>
 		<script src="assets/lib/trx-usd-price.js"></script>
+		<script src="assets/lib/api-stats.js"></script>
         
         <script type="text/javascript">
             function googleTranslateElementInit() {
@@ -542,7 +559,9 @@
             }
         </script>
         
-		
+		<script>
+            getCommonwealthEVMData();
+        </script>
         
         <script type="text/javascript">
 			function getCookie(name) {

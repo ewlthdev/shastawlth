@@ -73,138 +73,112 @@
         </header>
         
         <main role="main">
-            <div class="jumbotron glassPanel rcBottom" style="margin-top: 55px;">
-                <div class="row">
-                    <div class="col text-center">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col text-center">
-                                    <img src="assets/img/logo.png" width="150px" height="150px" />
-                                    <h1>tWLTH</h1>
-                                    <p>The World Savings Vault on TRON</p><br />
-                                </div>
-                            </div>
-                        </div>
+            <div class="jumbotron glassPanel" style="margin-top: 55px;">
+            <div class="container">
+                <div class="row text-center">
+                    <div class="col-md-2 text-right">
+                        <img src="assets/img/logo.png" width="100px" height="100px" class="img-responsive" />
+                    </div>
+                    
+                    <div class="col-md-10 text-left">
+                        <h1><span>tWLTH</span></h1>
+                        <p class="text-white">The World Savings Vault on TRON</p>
                     </div>
                 </div>
             </div>
+        </div>
             
-            <div class="container">
+            <div class="container glassPanel roundedCorners">
+                <br />
+                <br />
                 <div class="row">
-                    <div class="col-md-6 text-center">
-                        <div class="card glassPanel roundedCorners">
-                            <div class="card-header text-left"><h4>What is <span class="notranslate">Commonwealth</span> (tWLTH)?</h4></div>
-                            <div class="card-body">
-                                <div class="container">
-                                    <div class="row">
-                                        <div class="col text-center">
-                                            <img src="assets/img/logo.png" width="200px" height="200px" />
-                                            <p>
-                                                <span class="notranslate">Commonwealth</span> is a global savings fund, and a P2P safety net. Whenever funds are deposited, a 10% dividend is paid proportionally and instantly to every holder. This micro-dividend is used to provide scalable, long term income stability to the group as a whole. tWLTH is a TRC20-compliant token and can be accepted and used as money.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <br />
-                        
-                        <div class="card glassPanel roundedCorners">
-                            <div class="card-header text-left"><h4>What is the maximum supply of tWLTH?</h4></div>
-                            <div class="card-body">
-                                <div class="container">
-                                    <div class="row">
-                                        <div class="col text-center">
-                                            <img src="assets/img/about/2.png" width="350px" height="200px" />
-                                            <p>
-                                                Technically, there is no ‘maximum supply’ of tWLTH - however, there is a ‘Current Supply’ - this is determined solely by how much TRX is stored in the contract, and it is impossible to create tWLTH without the appropriate amount of TRX to back it stored in the contract.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <br />
-                        
-                        <div class="card glassPanel roundedCorners">
-                            <div class="card-header text-left"><h4>Can I trade tWLTH on UniSwap?</h4></div>
-                            <div class="card-body">
-                                <div class="container">
-                                    <div class="row">
-                                        <div class="col text-center">
-                                            <img src="assets/img/about/5.png" width="350px" height="200px" />
-                                            <p>
-                                                tWLTH is not compatible with JustSwap, because while it is TRC20-compliant, the `transfer()` function has been modified to call &quot;withdraw()&quot;, which means a UniSwap trade contract would end up with TRX that it doesn&apos;t know what to do with. This is because while the JustSwap contract would hold tokens, it too would also earn Dividends, and as such whenever the transfer function would be used by it in a trade, this problem of &quot;stuck&quot; TRX would occur.<br />
-                                                <br />
-                                                In short: No.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <br />
+                    <div class="col-md-4">
+                        <img src="assets/img/logo.png" width="200px" height="200px" />
                     </div>
-                    
-                    <div class="col-md-6 text-center">
-                        <div class="card glassPanel roundedCorners">
-                            <div class="card-header text-left"><h4>What is the <span class="notranslate">Commonwealth</span> Vault?</h4></div>
-                            <div class="card-body">
-                                <div class="container">
-                                    <div class="row">
-                                        <div class="col text-center">
-                                            <img src="assets/img/about/1.png" width="350px" height="200px" />
-                                            <p>
-                                                The vault is the true market cap of <span class="notranslate">Commonwealth</span>, it is how much TRON is locked in the smart contract. The vault can never be changed, taken down, or modified. It is open source and verified on TronScan - we encourage public audit.<br />
-                                                <br />
-                                                The <span class="notranslate">Commonwealth</span> vault only takes in TRON (TRX) and pays out TRX. If the price of TRX is $10 or $1000, the system will operate the same way. If the price of TRX goes up 10x, so will the price of tWLTH.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <br />
-                        
-                        <div class="card glassPanel roundedCorners">
-                            <div class="card-header text-left"><h4>Why don&apos;t my tWLTH show in my wallet?</h4></div>
-                            <div class="card-body">
-                                <div class="container">
-                                    <div class="row">
-                                        <div class="col text-center">
-                                            <img src="assets/img/about/3.png" width="350px" height="200px" />
-                                            <p>
-                                                <span class="notranslate">Commonwealth</span> is a very new type of smart contract, which means sometimes it does not display perfectly with wallets. As long as you can see your funds on the official web wallet, they are safe.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <br />
-                        
-                        <div class="card glassPanel roundedCorners">
-                            <div class="card-header text-left"><h4>What is the Price Floor?</h4></div>
-                            <div class="card-body">
-                                <div class="container">
-                                    <div class="row">
-                                        <div class="col text-center">
-                                            <img src="assets/img/about/4.png" width="350px" height="200px" />
-                                            <p>
-                                                The Price Floor contract is a smart contract that holds tWLTH. It can never sell, but it earns dividends when others buy or sell. It provides a guaranteed price floor. If you use <span class="notranslate">Commonwealth</span> on Ethereum Classic (ETC), you will know this feature as <i>&quot;RainMaker&quot;</i>.
-                                            </p>
-                                            <br />
-                                            <a class="btn btn-block btn-md btn-light roundedCorners" href="https://tronscan.org/#/contract/TYPZYSKHus3XS17iC6hw9c1aLPTEa6TQTw/code" target="_blank">View Contract on TronScan</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <br />
+                    <div class="col-md-8">
+                        <h4>What is <span class="notranslate">Commonwealth</span> (tWLTH)?</h4>
+                        <p>
+                            <span class="notranslate">Commonwealth</span> is a global savings fund, and a P2P safety net. Whenever funds are deposited, a 10% dividend is paid proportionally and instantly to every holder. This micro-dividend is used to provide scalable, long term income stability to the group as a whole. tWLTH is a TRC20-compliant token and can be accepted and used as money.
+                        </p>
                     </div>
                 </div>
                 <br />
+                
+                <div class="row">
+                    <div class="col-md-4">
+                        <img src="assets/img/about/1.png" width="350px" height="200px" />
+                    </div>
+                    <div class="col-md-8">
+                        <h4>What is the <span class="notranslate">Commonwealth</span> Vault?</h4>
+                        <p>
+                            The vault is the true market cap of <span class="notranslate">Commonwealth</span>, it is how much TRON is locked in the smart contract. The vault can never be changed, taken down, or modified. It is open source and verified on TronScan - we encourage public audit.<br />
+                            <br />
+                            The <span class="notranslate">Commonwealth</span> vault only takes in TRON (TRX) and pays out TRX. If the price of TRX is $10 or $1000, the system will operate the same way. If the price of TRX goes up 10x, so will the price of tWLTH.
+                        </p>
+                    </div>
+                </div>
+                <br />
+                
+                <div class="row">
+                    <div class="col-md-4">
+                        <img src="assets/img/about/2.png" width="350px" height="200px" />
+                    </div>
+                    <div class="col-md-8">
+                        <h4>What is the maximum supply of tWLTH?</h4>
+                        <p>
+                            Technically, there is no ‘maximum supply’ of tWLTH - however, there is a ‘Current Supply’ - this is determined solely by how much TRX is stored in the contract, and it is impossible to create tWLTH without the appropriate amount of TRX to back it stored in the contract.
+                        </p>
+                    </div>
+                </div>
+                <br />
+                
+                <div class="row">
+                    <div class="col-md-4">
+                        <img src="assets/img/about/3.png" width="350px" height="200px" />
+                    </div>
+                    <div class="col-md-8">
+                        <h4>Why don&apos;t my tWLTH show in my wallet?</h4>
+                        <p>
+                            <span class="notranslate">Commonwealth</span> is a very new type of smart contract, which means sometimes it does not display perfectly with wallets. As long as you can see your funds on the official web wallet, they are safe.
+                        </p>
+                    </div>
+                </div>
+                <br />
+                
+                <div class="row">
+                    <div class="col-md-4">
+                        <img src="assets/img/about/4.png" width="350px" height="200px" />
+                    </div>
+                    <div class="col-md-8">
+                        <h4>What is the Price Floor?</h4>
+                        <p>
+                            The Price Floor contract is a smart contract that holds tWLTH. It can never sell, but it earns dividends when others buy or sell. It provides a guaranteed price floor. If you use <span class="notranslate">Commonwealth</span> on Ethereum Classic (ETC), you will know this feature as <i>&quot;RainMaker&quot;</i>.
+                        </p>
+                        <br />
+                        <a class="btn btn-block btn-md btn-light roundedCorners" href="https://tronscan.org/#/contract/TYPZYSKHus3XS17iC6hw9c1aLPTEa6TQTw/code" target="_blank">View Contract on TronScan</a>
+                    </div>
+                </div>
+                <br />
+                
+                <div class="row">
+                    <div class="col-md-4">
+                        <img src="assets/img/about/5.png" width="350px" height="200px" />
+                    </div>
+                    <div class="col-md-8">
+                        <h4>Can I trade tWLTH on JustSwap / DEXs?</h4>
+                        <p>
+                            tWLTH is not compatible with JustSwap, because while it is TRC20-compliant, the `transfer()` function has been modified to call &quot;withdraw()&quot;, which means a UniSwap trade contract would end up with TRX that it doesn&apos;t know what to do with. This is because while the JustSwap contract would hold tokens, it too would also earn Dividends, and as such whenever the transfer function would be used by it in a trade, this problem of &quot;stuck&quot; TRX would occur.<br />
+                            <br />
+                            In short: No. DEXs and those contracts do not understand the new technology of Commonwealth.gg - but they may eventually!
+                        </p>
+                    </div>
+                </div>
+                <br />
+                <br />
             </div>
+            <br />
+            <br />
+            <br />
         </main>
         
         <footer class="footer bg-light">
