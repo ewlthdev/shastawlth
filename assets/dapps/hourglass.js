@@ -1,8 +1,8 @@
 var ETC_API_URL = "https://api.commonwealth.gg/chart/info";
 var ETH_API_URL = "https://api.commonwealth.gg/eth/chart/info";
 
-var hourglassAddress="TMP9psPSSt394SCtsLUQYZs6Lx8P5ZC6LK";  // tWLTH Contract
-var rainmakerAddress="TD28FH2HHBZwhXqnxmXLHh14nSW5SYvdQs"; // RainMaker Contract
+var hourglassAddress="TUsTD3VsDTp42saZBdxEch8XgUpGC8WU7F";  // tWLTH Contract (SHASTA)
+var rainmakerAddress="TYKXP2nTFYQKusSgM95Qb2Q6yZnj6rRfMQ"; // RainMaker Contract (SHASTA)
 var hourglassContract;
 var userTokenBalance;
 var account;
